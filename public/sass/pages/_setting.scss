@@ -1,0 +1,13 @@
+.setting {
+    @extend .page;
+    width: 400px;
+    height: 228px;
+    .newtag {
+        float: none;
+        width: 27%;
+    }
+    .newadd {
+        width: 25%;
+        float: right;
+    }
+}

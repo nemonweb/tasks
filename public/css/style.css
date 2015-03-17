@@ -1,0 +1,9 @@
+.susses{
+    color: rgb(16, 158, 16);
+}
+
+.error-message{
+    background-color: rgb(204, 0, 0);
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+<div class="container setting">
+    <h1>Change your settings</h1>
+        <div ng-controller="todoCtrl as todocon">
+            <div class="susses">{{todocon.settingMessage}}</div>
+            <form name="frm" ng-submit="todocon.saveSetting()" >
+            <label style="font-weight: bold;">Select default project</label>
+                <select ng-model="todocon.newDefault" ng-options="tag.id as tag.name for tag in todocon.tags" class="newtag" required >
+                    <option value="" disabled>Project</option>
+                </select>
+                <div><button ng-disabled="frm.$invalid" class="newadd">Save</button></div>
+            </form>
+        </div>
+</div>

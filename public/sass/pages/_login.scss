@@ -1,0 +1,70 @@
+.login{
+        @extend .page;
+        padding: 0px;
+        width:400px;
+        margin-top:8px;
+        .body{
+            padding: 10px;
+        }
+        h2{
+            background:#3399cc;
+          padding:20px 0;
+          text-align:center;
+          color:#fff;
+          margin: 0;
+          font-weight: bold;
+        }
+        .field_list{
+          width:92%;
+          margin: 4% auto;
+          .field{
+              background:#fff;
+              margin-bottom:4%;
+              border:1px solid #ccc;
+              padding:4%;
+              font-family:'Open Sans',sans-serif;
+              font-size:95%;
+              color:#555;
+              width: 100%;
+              display: block;
+              &:focus{
+                  border-color: #3399cc;
+                  outline: 0;
+                  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                }
+            }
+        }
+        .button_list{
+          display: block;
+          height: 50px;
+          width: 60%;
+          margin: 0 auto;
+          .reg{
+              float: left;
+              padding: 4%;
+              color: #39c;
+              text-decoration: initial;
+              font-weight: bold;
+            }
+            input[type="submit"]{
+              background:#3399cc;
+              border:0;
+              float: right;
+              padding: 4% 10%;
+              font-family:'Open Sans',sans-serif;
+              font-size:100%;
+              color:#fff;
+              cursor:pointer;
+              transition:background .3s;
+              &:hover{
+                  background:#2288bb;
+                }
+            }
+        }
+
+    &.register{
+        input[type="submit"]{
+          width: 100%;
+        }
+    }
+}

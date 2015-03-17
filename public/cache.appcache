@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# v1 2011-08-14
+# This is another comment
+//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js
+//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js
+//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js
+//fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic
+
+NETWORK:
+http://svodki.app/api/
+http://svodki.app/auth/
+http://svodki.app/auth/csrf_token
+http://svodki.web-service.ms/api/
+http://svodki.web-service.ms/images/
+http://svodki.app/images/
+
+http://svodki.tihomirov.me/api/
+http://svodki.tihomirov.me/auth/
+http://svodki.tihomirov.me/auth/csrf_token
+http://svodki.tihomirov.me/images/
+
+/production.min.js
+/production.min.css
+/pages/task.html
+/pages/admin.html
+/pages/down.html
+/pages/history.html
+/pages/setting.html

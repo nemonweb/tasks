@@ -1,0 +1,80 @@
+.adminka {
+    color: #404040;
+    ul {
+        margin: 0;
+    }
+    .item {
+        background-color: #FAFAFC;
+        min-width: 350px;
+        border-radius: 5px;
+        border: 1px solid #dedee6;
+        margin-bottom: 1%;
+        overflow: scroll;
+        height: 500px;
+        .head {
+            height: 115px;
+            padding: 10px;
+            .circle {
+                line-height: 0;
+                display: inline-block;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+                border-radius: 50%;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+                transition: linear .25s;
+                height: 100px;
+                width: 100px;
+                float: left;
+                img {
+                    max-width: 100px;
+                    border-radius: 50%;
+                }
+            }
+            .text {
+                float: left;
+                margin-left: 20px;
+                margin-top: 25px;
+                font-weight: 300;
+                font-family: proxima-nova,Helvetica,Arial,sans-serif;
+                .name {
+                    font-size: 21px;
+                    font-style: normal;
+                    font-variant: normal;
+                    color: #384046;
+                    text-align: center;
+                }
+                .active {
+                    color: #b0b0b0;
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .body {
+            border-top: 1px solid #eee;
+            .task_list {
+                padding: 0;
+                list-style-type: none;
+                li {
+                    border-bottom: 1px solid #eee;
+                    padding: 10px;
+                    font-family: HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',lato,Helvetica,Arial,sans-serif;
+                    font-size: 16px;
+                    letter-spacing: .5199999809265137px;
+                }
+                .added {
+                    color: #398439;
+                    text-shadow: none;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 1%;
+                    &.long {
+                        color: #ac2925;
+                    }
+                }
+                .completed {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}

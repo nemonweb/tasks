@@ -1,0 +1,23 @@
+<div class="adminka" ng-controller="adminkaCtrl as users">
+
+    <div class="item g-medium--half g-wide--1" ng-repeat="item in users.user">
+            <div class="head">
+                <div class="circle">
+                    <img src="/images/avatars/{{item.images}}">
+                </div>
+                <div class="text">
+                    <div class="name">{{item.name}}</div>
+                    <div class="active">last active {{ users.datefrom(item.tasks[0].updated_at) }}</div>
+                </div>
+            </div>
+            <div class="body">
+                <ul class="task_list" ng-repeat="task in item.tasks">
+                    <li>
+                        <div class="text" ng-class="{ completed : task.done == 1 }" >{{task.name}}</div>
+                        <div class="added" ng-class="{ long : users.dayfrom(task.created_at) }">Added {{users.datefrom(task.created_at)}} ({{task.created_at}}).</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+</div>

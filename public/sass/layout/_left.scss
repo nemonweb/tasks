@@ -1,0 +1,47 @@
+.left_side {
+  background-color:#4a565d;
+  width:16%;
+  height:100%;
+  position:fixed;
+  padding:10px;
+  .logo {
+      color:#eff0f0;
+      font-family:proxima-nova,Helvetica,Arial,sans-serif;
+      font-size:30px;
+      font-style:normal;
+      font-variant:normal;
+      font-weight:lighter;
+      line-height:37px;
+      text-align:center;
+      margin-top:20%;
+    }
+    .copyryght {
+      text-align:right;
+      margin-right:10%;
+      color:#9ea1a3;
+    }
+    .menu {
+      padding:0;
+      list-style-type:none;
+        li {
+          text-align:center;
+          padding:5px;
+            &.active {
+              background-color:#2f7747;
+                a {
+                  color:#f9fbfa;
+                }
+            }
+        }
+        a {
+          color:#a2acae;
+          text-decoration:blink;
+          text-transform:uppercase;
+          font-weight:lighter;
+          letter-spacing:2px;
+          font-family:HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',lato,Helvetica,Arial,sans-serif;
+          line-height:11px;
+          font-size:13px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="container page">
+    <h1>Выборка задач</h1>
+    <form method="POST" action="/down" accept-charset="UTF-8">
+        <div ng-controller="downCtrl as down">
+            с <input type="date" name="myDateOt" ng-model="down.date_ot" placeholder="дд.мм.гггг" required>
+            по <input type="date" name="myDateDo" ng-model="down.date_do" placeholder="дд.мм.гггг" value="{{down.date_do}}">
+
+            <input type="hidden" value="{{ down.date_ot | date:'dd-MM-yyyy'}}" name="myDateOt">
+            <input type="hidden" value="{{ down.date_do | date:'dd-MM-yyyy'}}" name="myDateDo">
+            <p>
+                <input type="submit" value="Скачать">
+            </p>
+
+        </div>
+    </form>
+</div>

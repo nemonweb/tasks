@@ -1,0 +1,43 @@
+    <div class="container task">
+
+        <h1>Task report</h1>
+        <div ng-controller="todoCtrl as todocon">
+            <div class="error-message" ng-bind="todocon.error"></div>
+            <form name="frm" ng-submit="todocon.addTodo()" class="newform">
+                <input type="text" name="newtodo" class="newtodo" ng-model="todocon.newTodo" placeholder="What are you working on?" required>
+                <select ng-model="todocon.newTag" ng-options="tag.id as tag.name for tag in todocon.tags" class="newtag" required g>
+                    <option value="" disabled>+ Project</option>
+                </select>
+                <button ng-disabled="frm.$invalid" class="newadd">Add</button>
+            </form>
+
+            <div>Task</div>
+            <ul class="itemlist">
+                <li ng-repeat="todo in todocon.todos | taskFilter track by todo.id" ng-mouseenter="show = true" ng-mouseleave="show = false">
+                    <input type="checkbox" ng-model="todo.done" ng-checked="todo.done == 1" ng-change="todocon.update(todo)" ng-true-value="1" ng-false-value="0">
+                    <span ng-class="{'done':todo.done == 1}" ng-bind="todo.name"></span>
+                    <div class="actiondiv" ng-show="show">
+                        <span class="project" ng-bind="todo.tagname"></span>
+                        <span><a href="#" ng-click="todocon.removeTodo(todo)"><i class="fa fa-times remove"></i></a></span>
+                    </div>
+
+                </li>
+            </ul>
+
+            <div>
+                <div class="completed" ng-click="showCompleted = !showCompleted"><i class="completed_img" ng-class="{'open': showCompleted, '': !showCompleted}"></i> Completed on this week</div>
+                <ul class="itemlist" ng-show="showCompleted">
+                    <li ng-repeat="todo in todocon.todos | filter:{done: 1}" ng-mouseenter="show = true" ng-mouseleave="show = false">
+                        <input type="checkbox" ng-model="todo.done" ng-checked="todo.done == 1" ng-change="todocon.update(todo)" ng-true-value="1" ng-false-value="0">
+                        <span ng-class="{'done':todo.done == 1}" ng-bind="todo.name"></span>
+                        <div class="actiondiv" ng-show="show">
+                            <span class="project" ng-bind="todo.tagname"></span>
+                            <span><a href="#" ng-click="todocon.removeTodo(todo)"><i class="remove"></i></a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>

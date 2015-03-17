@@ -1,0 +1,22 @@
+<div class="container history" ng-controller="historyCtrl as hist">
+    <h1>History</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Task name</th>
+          <th class="table-center">Project</th>
+          <th class="td-data">Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in hist.items">
+          <td></td>
+          <td>{{item.name}}</td>
+          <td class="table-center">{{item.tagname}}</td>
+          <td class="table-center">{{item.unix * 1000  | date:'dd-MM-yyyy'}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
